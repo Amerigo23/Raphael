@@ -1,1 +1,7 @@
 raw_data/
+.DS_Store
+RaphaHealth/.DS_Store
+*Zone.Identifier
+.env
+.envrc
+ .python-version
