@@ -1,3 +1,4 @@
 termcolor
 pathlib
 joblib
+scikit-learn
