@@ -23,7 +23,7 @@ model = tf.keras.models.load_model(model_path)
 
 
 # Check if the model file exists
-scaler_path = Path('/Users/amermujkanovic/code/Amerigo23/RaphaelHealth/RaphaHealth/notebooks/scaler.pkl')
+scaler_path = Path('RaphaHealth/notebooks/scaler.pkl')
 
 with open(scaler_path, 'rb') as f:
     scaler = pickle.load(f)
