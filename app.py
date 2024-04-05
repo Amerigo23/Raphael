@@ -20,7 +20,7 @@ model_path = Path('model.pkl')
 model = load(model_path)
 
 scaler_path = Path('/Users/amermujkanovic/code/Amerigo23/RaphaelHealth/RaphaHealth/notebooks/scaler.pkl')
-scaler = pd.read_pickle(r'scaler.pkl')
+scaler = pd.read_pickle(r'scaler_standard.pkl')
 # with open(scaler_path, 'rb') as f:
 #     scaler = pickle.load(f)
 
@@ -292,11 +292,12 @@ def prediction():
             'both_clinic': [float(0)],
             'cci': [int(0)]
             })
-        columns_to_scale = ['lohs']
-        initial_list_wo_dis[columns_to_scale] = scaler.fit_transform(initial_list_wo_dis[columns_to_scale])
+        # columns_to_scale = ['lohs', 'clinic_visits']
+        # initial_list_wo_dis = scaler.fit_transform(initial_list_wo_dis)
         # st.write(pd.DataFrame(selected_disease_list).T)
         # initial_list_wo_dis.extend(selected_disease_list)
         # Make prediction
+        st.write(initial_list_wo_dis)
 
 
 
