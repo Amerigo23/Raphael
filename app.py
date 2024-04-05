@@ -4,7 +4,7 @@ import streamlit as st
 import pandas as pd
 from joblib import load
 import numpy as np
-import pickle
+import cPickle as pickle
 import sklearn
 from sklearn.preprocessing import RobustScaler
 # Set page configuration
@@ -20,9 +20,9 @@ model_path = Path('model.pkl')
 model = load(model_path)
 
 scaler_path = Path('/Users/amermujkanovic/code/Amerigo23/RaphaelHealth/RaphaHealth/notebooks/scaler.pkl')
-
+scaler = pd.read_pickle(r'scaler.pkl')
 # with open(scaler_path, 'rb') as f:
-scaler = pickle.load(f)
+#     scaler = pickle.load(f)
 
 #####################################################
 ################  LOGIN PAGE  ######################
