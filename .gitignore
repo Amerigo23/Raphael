@@ -5,3 +5,4 @@ RaphaHealth/.DS_Store
 .env
 .envrc
  .python-version
+tests

@@ -5,7 +5,8 @@ import pandas as pd
 from joblib import load
 import numpy as np
 import pickle
-
+import sklearn
+from sklearn.preprocessing import RobustScaler
 # Set page configuration
 st.set_page_config(
     page_title='Raphael Health',
@@ -18,6 +19,10 @@ model_path = Path('model.pkl')
 
 model = load(model_path)
 
+scaler_path = Path('/Users/amermujkanovic/code/Amerigo23/RaphaelHealth/RaphaHealth/notebooks/scaler.pkl')
+
+with open(scaler_path, 'rb') as f:
+    scaler = pickle.load(f)
 
 #####################################################
 ################  LOGIN PAGE  ######################
@@ -287,6 +292,8 @@ def prediction():
             'both_clinic': [float(0)],
             'cci': [int(0)]
             })
+        columns_to_scale = ['lohs']
+        initial_list_wo_dis[columns_to_scale] = scaler.fit_transform(initial_list_wo_dis[columns_to_scale])
         # st.write(pd.DataFrame(selected_disease_list).T)
         # initial_list_wo_dis.extend(selected_disease_list)
         # Make prediction
