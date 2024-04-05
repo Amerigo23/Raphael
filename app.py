@@ -4,7 +4,7 @@ import streamlit as st
 import pandas as pd
 from joblib import load
 import numpy as np
-import cPickle as pickle
+import pickle
 import sklearn
 from sklearn.preprocessing import RobustScaler
 # Set page configuration
