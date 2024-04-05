@@ -2,4 +2,3 @@ termcolor
 pathlib
 joblib
 scikit-learn
-pickle

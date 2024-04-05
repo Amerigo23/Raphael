@@ -21,8 +21,8 @@ model = load(model_path)
 
 scaler_path = Path('/Users/amermujkanovic/code/Amerigo23/RaphaelHealth/RaphaHealth/notebooks/scaler.pkl')
 
-with open(scaler_path, 'rb') as f:
-    scaler = pickle.load(f)
+# with open(scaler_path, 'rb') as f:
+scaler = pickle.load(f)
 
 #####################################################
 ################  LOGIN PAGE  ######################
