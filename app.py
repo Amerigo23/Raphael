@@ -297,7 +297,7 @@ def prediction():
         # st.write(pd.DataFrame(selected_disease_list).T)
         # initial_list_wo_dis.extend(selected_disease_list)
         # Make prediction
-        st.write(initial_list_wo_dis)
+        # st.write(initial_list_wo_dis)
 
 
 
