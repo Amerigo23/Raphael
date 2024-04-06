@@ -44,7 +44,7 @@ def login_form():
         if login_button:
             if login_user(username, password):
                 st.session_state.logged_in = True
-                st.experimental_rerun()
+                # st.experimental_rerun()
             else:
                 st.error("Incorrect username or password. Please try again.")
 
